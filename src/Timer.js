@@ -15,7 +15,7 @@ class Timer extends Component {
 
   //Your code here
   componentDidUpdate(prevProps, prevState, snapShot){
-    
+
   }
 
 
