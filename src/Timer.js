@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Timer extends React.PureComponent {
+class Timer extends PureComponent {
 
   constructor() {
     super()
