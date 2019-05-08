@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class Timer extends PureComponent {
+class Timer extends Component {
 
   constructor() {
     super()
@@ -17,6 +17,11 @@ class Timer extends PureComponent {
   componentDidUpdate(prevProps, prevState, snapShot){
     this.timer.current.style.color = "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return (this.state.time !== nextState.time);
+  }
+
 
   componentDidMount() {
     this.interval = setInterval(this.clockTick, this.props.updateInterval*1000)
